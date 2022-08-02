@@ -26,4 +26,24 @@ export const schema = [
           options: [],
           validation: 'required'
         }
-      ]
+]
+
+export const dummyData = {
+  data: [
+    {
+      value: 1,
+      label: "Gujarat",
+      cities: ["junagadh", "Ahmedabad", "Surat", "Rajkot", "Morbi", "Manavadar", "Bhavnagar", "Jamnagar"]
+    },
+    {
+      value: 2,
+      label: "Maharashtra",
+      cities: ["Pune", "Mumbai", "Nasik", "Nagpur", "Thane", "Kalyan-Dombivali", "Vasai-Virar"]
+    },
+    {
+      value: 3,
+      label: "Uttar Pradesh",
+      cities: ["Loni", "Jhansi", "Puducherry", "Nellore", "Jammu"]
+    }
+  ]
+}

@@ -5,7 +5,7 @@
         to="/"
         class="navbar-brand"
       >
-        # Vue Demo
+        # Home
       </router-link>
       <div class="navbar-nav mr-auto">
         <li class="nav-item">

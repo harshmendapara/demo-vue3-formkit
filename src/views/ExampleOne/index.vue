@@ -3,19 +3,20 @@
     <FormKit type="form" v-model="data" @submit="register">
       <FormKitSchema :schema="fields" />
     </FormKit>
-    <pre>{{ data }}</pre>
   </div>
 </template>
 
 <script>
-import axios from "axios";
+// import axios from "axios";
 import { onMounted, ref, watch } from "vue";
-import { schema } from "./config";
+import { schema, dummyData } from "./config";
 
 export default {
   name: "ExampleOne",
   setup() {
-    const data = ref({});
+    const data = ref({
+      checkbox: ['firstname']
+    });
     const states = ref([]);
     const fields = ref([...schema]);
 
@@ -40,9 +41,10 @@ export default {
 
     const fetchAllState = async () => {
       try {
-        const data = await axios.get("http://localhost:3000/states");
+        // const data = await axios.get("http://localhost:3000/states");
+        const data = dummyData
         states.value = JSON.parse(JSON.stringify(data.data))
-        // update state
+        
         let tempStateArr = [...fields.value];
 
         const index = tempStateArr.findIndex((i) => i.name == "state");
